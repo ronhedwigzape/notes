@@ -1,12 +1,23 @@
 <template>
-	<div class="m-5">
-		<button
-			type="button"
-			@click="openModal"
-			class="rounded-md bg-black bg-opacity-20 px-4 py-2 text-sm font-medium text-white hover:bg-opacity-30 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75"
-		>
-			Add a New Note
-		</button>
+	<div class="flex m-5 items-center justify-center">
+		<div class="mx-3">
+			<button
+				type="button"
+				@click="openModal"
+				class="rounded-md bg-black bg-opacity-20 px-4 py-2 text-sm font-medium text-white hover:bg-opacity-30 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75"
+			>
+				<PlusIcon class="h-6 w-6 text-black opacity-70" />
+			</button>
+		</div>
+<!--		<div class="mx-3">-->
+<!--			<button-->
+<!--				type="button"-->
+<!--				@click=""-->
+<!--				class="rounded-md bg-black bg-opacity-20 px-4 py-2 text-sm font-medium text-white hover:bg-opacity-30 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75"-->
+<!--			>-->
+<!--				<TrashIcon class="h-6 w-6 text-black opacity-70" />-->
+<!--			</button>-->
+<!--		</div>-->
 	</div>
 	<TransitionRoot appear :show="isOpen" as="template">
 		<Dialog as="div" @close="closeModal" class="relative z-10">
@@ -58,7 +69,7 @@
 												type="text"
 												name="title"
 												id="title"
-												autocomplete="given-name"
+												autocomplete="title"
 												class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
 											>
 										</div>
@@ -112,6 +123,7 @@ import {
 	DialogPanel,
 	DialogTitle,
 } from '@headlessui/vue'
+import { PlusIcon, TrashIcon } from '@heroicons/vue/24/solid'
 
 const isOpen = ref(true)
 
