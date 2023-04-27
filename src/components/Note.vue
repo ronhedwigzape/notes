@@ -1,8 +1,8 @@
 <template>
-	<div class="note">
+	<div class="mt-10">
+		<div class="bg-amber-300 m-5 p-5">
+			<h1>hi</h1>
 
-		<div v-for="text in texts" :key="text">
-			{{ text.content }}
 		</div>
 	</div>
 </template>
