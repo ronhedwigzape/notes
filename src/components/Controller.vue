@@ -1,24 +1,23 @@
 <template>
-	<div class="flex m-5 items-center justify-center">
+	<!--	Add Note	-->
+	<div class=" relative flex m-5">
+		<Burger />
+
+		<div class="ms-5 mt-0.5 me-auto">
+			Notes
+		</div>
 		<div class="mx-3">
 			<button
 				type="button"
 				@click="openModal"
-				class="rounded-md bg-black bg-opacity-20 px-4 py-2 text-sm font-medium text-white hover:bg-opacity-30 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75"
+				class="absolute right-0 rounded-md border-2 border-black duration-300 border-opacity-75 bg-opacity-0 px-2 py-2 hover:border-opacity-5 hover:bg-gray-300 hover:text-gray-50"
 			>
-				<PlusIcon class="h-6 w-6 text-black opacity-70" />
+				<PlusIcon class="h-6 w-6" />
 			</button>
 		</div>
-<!--		<div class="mx-3">-->
-<!--			<button-->
-<!--				type="button"-->
-<!--				@click=""-->
-<!--				class="rounded-md bg-black bg-opacity-20 px-4 py-2 text-sm font-medium text-white hover:bg-opacity-30 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75"-->
-<!--			>-->
-<!--				<TrashIcon class="h-6 w-6 text-black opacity-70" />-->
-<!--			</button>-->
-<!--		</div>-->
 	</div>
+
+	<!--  Dialog	-->
 	<TransitionRoot appear :show="isOpen" as="template">
 		<Dialog as="div" @close="closeModal" class="relative z-10">
 			<TransitionChild
@@ -92,12 +91,12 @@
 									</div>
 								</div>
 								<div class="mt-6 flex items-center justify-end gap-x-6">
-<!--									<button-->
-<!--										type="button"-->
-<!--										class="text-sm font-semibold leading-6 text-gray-900"-->
-<!--									>-->
-<!--										Cancel-->
-<!--									</button>-->
+									<button
+										type="button"
+										class="text-sm font-semibold leading-6 text-gray-900"
+									>
+										Cancel
+									</button>
 									<button
 										type="submit"
 										class="rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
@@ -115,18 +114,21 @@
 	</TransitionRoot>
 </template>
 <script setup>
-import { ref } from 'vue'
+import { ref } from 'vue';
+import Burger from './Burger.vue';
 import {
 	TransitionRoot,
 	TransitionChild,
 	Dialog,
 	DialogPanel,
 	DialogTitle,
-} from '@headlessui/vue'
-import { PlusIcon, TrashIcon } from '@heroicons/vue/24/solid'
+} from '@headlessui/vue';
+import { PlusIcon, MagnifyingGlassIcon } from '@heroicons/vue/24/solid';
 
-const isOpen = ref(true);
+// data
+const isOpen = ref(false);
 
+// methods
 const closeModal = () => {
 	isOpen.value = false;
 }
@@ -135,7 +137,5 @@ const openModal = () => {
 }
 </script>
 <style scoped>
-.list {
-	list-style-type: none;
-}
+
 </style>
