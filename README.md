@@ -19,3 +19,6 @@ npm run dev
 ```sh
 npm run build
 ```
+
+[//]: # (Color Pallete for this project)
+[//]: # (https://coolors.co/0d1b1e-7798ab-c3dbc5-e8dcb9-f2cee6)
