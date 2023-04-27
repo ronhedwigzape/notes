@@ -3,8 +3,12 @@
 		<!--	Controller Bar 	-->
 		<Controller />
 
+		<div class="border-b-2 border-b-gray-600 mt-10"></div>
+
 		<!--	Main Content	-->
 		<main>
+
+
 		<Note />
 		</main>
 	</div>
