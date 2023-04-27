@@ -125,13 +125,13 @@ import {
 } from '@headlessui/vue'
 import { PlusIcon, TrashIcon } from '@heroicons/vue/24/solid'
 
-const isOpen = ref(true)
+const isOpen = ref(true);
 
-function closeModal() {
-	isOpen.value = false
+const closeModal = () => {
+	isOpen.value = false;
 }
-function openModal() {
-	isOpen.value = true
+const openModal = () => {
+	isOpen.value = true;
 }
 </script>
 <style scoped>
