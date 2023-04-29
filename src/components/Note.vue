@@ -3,7 +3,7 @@
 		<div class="bg-amber-300 m-5 p-5">
 			<div class="mb-8">
 				<EllipsisHorizontalIcon class="h-5 w-5 float-left"/>
-				<XMarkIcon class="h-4 w-4 float-right" />
+				<XMarkIcon class="h-5 w-5 float-right" />
 			</div>
 			<div>
 				<h2 class="text-2xl">{{ sampleTitle }}</h2>

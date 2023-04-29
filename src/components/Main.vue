@@ -1,9 +1,7 @@
 <template>
 	<div>
-		<!--	Controller Bar 	-->
-		<Controller />
-
-		<div class="border-b-2 border-b-gray-600 my-8"></div>
+		<!--	Navigation Bar 	-->
+		<Navigation />
 
 		<!--	Main Content	-->
 		<main>
@@ -15,13 +13,13 @@
 </template>
 
 <script>
-import Controller from "./Navbar.vue";
+import Navigation from "./Navbar.vue";
 import Note from "./Note.vue";
 
 export default {
 	name: "Main",
 	components: {
-		Controller,
+		Navigation,
 		Note
 	}
 
