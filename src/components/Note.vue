@@ -1,8 +1,16 @@
 <template>
-	<div class="mt-10">
+	<div class="mt-8">
 		<div class="bg-amber-300 m-5 p-5">
-			<h1>hi</h1>
-
+			<div class="mb-8">
+				<EllipsisHorizontalIcon class="h-5 w-5 float-left"/>
+				<XMarkIcon class="h-4 w-4 float-right" />
+			</div>
+			<div>
+				<h2 class="text-2xl">{{ sampleTitle }}</h2>
+				<div class="mt-4">
+					<p class="">{{ sampleNote[0].content}}</p>
+				</div>
+			</div>
 		</div>
 	</div>
 </template>
@@ -13,10 +21,18 @@ export default {
 }
 </script>
 <script setup>
-import {ref} from "vue";
+import {reactive, ref} from "vue";
+import { XMarkIcon, EllipsisHorizontalIcon } from '@heroicons/vue/24/solid';
+
+const sampleTitle = ref("A Sample Title");
 
 const texts = ref([
+	{ content: "A sample note A sample note A sample note A sample note A sample note A sample note A sample note A sample note A sample note A sample note " },
 	{ content: "A sample note" },
+]);
+
+const sampleNote = reactive([
+	{ content: "A sample note A sample note A sample note A sample note A sample note A sample note A sample note A sample note A sample note A sample note " },
 	{ content: "A sample note" },
 ]);
 

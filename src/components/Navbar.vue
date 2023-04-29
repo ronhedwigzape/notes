@@ -3,7 +3,7 @@
 	<div class=" relative flex m-5">
 		<Burger />
 
-		<div class="ms-5 mt-0.5 me-auto">
+		<div class="ms-5 my-0.5 me-auto">
 			Notes
 		</div>
 		<div class="mx-3">
@@ -12,7 +12,7 @@
 				@click="openModal"
 				class="absolute right-0 rounded-md border-2 border-black duration-300 border-opacity-75 bg-opacity-0 px-2 py-2 hover:border-opacity-5 hover:bg-gray-300 hover:text-gray-50"
 			>
-				<PlusIcon class="h-6 w-6" />
+				<PlusIcon class="h-3 w-3" />
 			</button>
 		</div>
 	</div>
