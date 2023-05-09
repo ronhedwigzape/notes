@@ -36,6 +36,9 @@ const sampleNote = reactive([
 	{ content: "A sample note" },
 ]);
 
+ /**********************************************************
+ * TODO: Make this asynchronous function complete.
+ */
 const getNotes = async () => {
 	try {
 		const response = fetch('');

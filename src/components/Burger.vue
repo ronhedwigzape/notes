@@ -13,6 +13,9 @@
 <script setup>
 import {ref} from "vue";
 
+/**********************************************************
+ * TODO: All data can be stored through Pinia, place there.
+ */
 const isNavOpen = ref(false);
 const isBurgerActive = ref(false);
 
